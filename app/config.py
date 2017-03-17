@@ -102,7 +102,7 @@ class DefaultConfig:
 
     SOCIAL = {
         # Key should correspond to a font-awesome icon
-        "facebook": "https://facebook.com/c",
+        "facebook": "https://facebook.com/calendar42",
         "twitter": "https://twitter.com/calendar42",
         "github": "https://github.com/calendar42/",
         "linkedin": "https://www.linkedin.com/company/calendar42",
