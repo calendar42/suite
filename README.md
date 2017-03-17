@@ -52,7 +52,7 @@ The `/api/v2/internal/cron/` endpoint must be triggered every 60 seconds. We are
 
 Alternatively, consider just using a Jenkins job with:
 
-```curl --user API_KEY: http://suite.local/api/v2/internal/cron/```
+```curl --user API_KEY: http://shift.c42.io/api/v2/internal/cron/```
 
 (*NOTE*: the trailing colon after the API key is required)
 
@@ -102,7 +102,7 @@ To boot a dev server for the first time, run:
 make dev
 ```
 
-The first time it launches, it will take a long time to download the required base images. After that, required packages and images will be cached. The app will be running at [suite.local](http://suite.local)
+The first time it launches, it will take a long time to download the required base images. After that, required packages and images will be cached. The app will be running at [shift.c42.io](http://shift.c42.io)
 
 To quickly launch a dev server that has already been built, you can use this shortcut command from the project root:
 
