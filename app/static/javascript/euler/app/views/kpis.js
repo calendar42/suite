@@ -110,7 +110,7 @@
                     type: 'line',
                     name: 'People Schedule Per Week',
                     data: data,
-                    color: "#48B7AB",
+                    color: "#44bbff",
                     dataLabels: {
                         enabled: true,
                         color: '#423A3F',
