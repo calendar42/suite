@@ -32,7 +32,7 @@ class OrgAdminApi(Resource):
             user,
             "You have been removed as an administator of %s on Staffjoy" %
             organization.name,
-            "You have been removed as an organization administrator of the Staffjoy account for %s."
+            "You have been removed as an organization administrator of the c42 account for %s."
             % organization.name,
             force_send=True)
         return {}, 204

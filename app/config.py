@@ -29,9 +29,9 @@ class DefaultConfig:
     SECRET_KEY = os.environ.get("SECRET_KEY")
 
     # Link to job application form
-    CAREER_APPLICATION_URL = "https://staffjoy.com"
+    CAREER_APPLICATION_URL = "http://careers.calendar42.com/"
 
-    # Incident Tracking (optional) 
+    # Incident Tracking (optional)
     STATUS_PAGE_ID = os.environ.get("STATUS_PAGE_ID")
     STATUS_PAGE_API_KEY = os.environ.get("STATUS_PAGE_API_KEY")
 
@@ -51,7 +51,7 @@ class DefaultConfig:
     TWILIO_AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN")
     TWILIO_NUMBER = {
         # Country code to number. At least one is necessary that matches DEFAULT_COUNTRY_CODE in constants.py
-        # e.g. 
+        # e.g.
         "1": "1234567890",
     }
 
@@ -102,16 +102,16 @@ class DefaultConfig:
 
     SOCIAL = {
         # Key should correspond to a font-awesome icon
-        "facebook": "https://facebook.com/staffjoyapp",
-        "twitter": "https://twitter.com/staffjoy",
-        "github": "https://github.com/staffjoy",
-        "linkedin": "https://www.linkedin.com/company/6612912",
+        "facebook": "https://facebook.com/calendar42",
+        "twitter": "https://twitter.com/calendar42",
+        "github": "https://github.com/calendar42/",
+        "linkedin": "https://www.linkedin.com/company/calendar42",
     }
 
     TEAM = [
         {
             "name":
-            "Philip Thomas",
+            "Jasper Hartong",
             "title":
             "Co-Founder and CEO",
             # Images should be 350px by 350px and have an @2x version

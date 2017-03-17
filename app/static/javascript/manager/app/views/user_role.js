@@ -93,7 +93,7 @@
                 new Views.DangerZoneCard({
                     description: 'Clicking here will remove ' + userName + ' from ' + roleName + '. You can add ' + userName + ' to another role using ' + email + '.',
                     buttonLabel: 'Delete ' + userName,
-                    confirmationMessage: 'Are you sure you want to remove ' + userName + '? Staffjoy retains some data for compliance purposes, such as preserving payroll records.',
+                    confirmationMessage: 'Are you sure you want to remove ' + userName + '? c42 retains some data for compliance purposes, such as preserving payroll records.',
                     dangerZoneCallback: self.removeUserFromRole.bind(self),
                 })
             );

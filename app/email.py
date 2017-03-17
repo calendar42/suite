@@ -13,7 +13,7 @@ def send_email(to, subject, html_body):
 @celery.task(bind=True, max_retries=2)
 def _send_email(self, to, subject, html_body):
 
-    # We intentionally commented out this code - we used it to prevent emails in development from going to non-Staffjoy emails.
+    # We intentionally commented out this code - we used it to prevent emails in development from going to non-c42 emails.
     """
     if current_app.config.get("ENV") != "prod":
         allowed_domains = ["@staffjoy.com", "@7bridg.es"]
@@ -41,7 +41,7 @@ def _send_email(self, to, subject, html_body):
     try:
         client = mandrill.Mandrill(current_app.config.get('MANDRILL_API_KEY'))
 
-        # Staffjoy originaly used a Mandrill template hosted in our account.
+        # c42 originaly used a Mandrill template hosted in our account.
         # We have commented it out, and subbed in a no-template sender.
         # pylint: disable=pointless-string-statement
         """

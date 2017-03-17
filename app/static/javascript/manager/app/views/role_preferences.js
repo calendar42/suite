@@ -77,7 +77,7 @@
                 new Views.DangerZoneCard({
                     description: "Clicking here will delete " + data.name + " including all of it's users.",
                     buttonLabel: 'Delete ' + data.name,
-                    confirmationMessage: 'Are you sure you want to delete ' + data.name + ' including all of its users? Staffjoy retains some data for compliance purposes, such as preserving payroll records.',
+                    confirmationMessage: 'Are you sure you want to delete ' + data.name + ' including all of its users? c42 retains some data for compliance purposes, such as preserving payroll records.',
                     dangerZoneCallback: self.deleteRole.bind(self),
                 })
             );
