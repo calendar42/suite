@@ -11,7 +11,7 @@ from app.models import *
 import unittest
 
 #app = create_app(os.environ.get("ENV", "prod"))
-app = create_app("dev")
+app = create_app("demo")
 celery = create_celery_app(app)
 manager = Manager(app)
 migrate = Migrate(app, db)
