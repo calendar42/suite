@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.hostmanager.enabled = true
     config.hostmanager.manage_host = true
     config.hostmanager.aliases = [
-      'suite.local',
+      'shift.c42.io',
     ]
   else
     fail_with_message "vagrant-hostmanager missing, please install the plugin with this command:\nvagrant plugin install vagrant-hostmanager"

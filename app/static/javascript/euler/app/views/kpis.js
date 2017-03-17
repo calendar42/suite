@@ -120,7 +120,7 @@
 
             $peopleSchedulePerWeek.highcharts(opts);
         },
-        kioskMode: function(e) { 
+        kioskMode: function(e) {
             e.preventDefault();
             e.stopPropagation();
 
