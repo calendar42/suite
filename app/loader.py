@@ -30,7 +30,7 @@ def vendor_single_page():
 
 def shared_single_page():
     """
-    these files create the foundation for any staffjoy single page app
+    these files create the foundation for any c42 single page app
     """
 
     base = "javascript/shared"
