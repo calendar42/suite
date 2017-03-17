@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import os
 
 from app import create_app, db
@@ -8,7 +9,7 @@ Populates a dev database with cool information :-)
 """
 app = create_app("dev")
 PASSWORD = "staffjoydev"
-FILE = "/vagrant/user.txt"
+FILE = "/home/ubuntu/suite/user.txt"
 with app.app_context():
     if not os.path.isfile(FILE):
         print "READ THE README! You're missing a user.txt file"
