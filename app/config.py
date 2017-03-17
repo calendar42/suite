@@ -132,7 +132,7 @@ class DefaultConfig:
 
     DEFAULT_COUNTRY_CODE = "1"  # for website footer
 
-    KPI_EMAILS_TO_EXCLUDE = ["%@staffjoy.com", "%@7bridg.es"]
+    KPI_EMAILS_TO_EXCLUDE = ["%@staffjoy.com", "%@7bridg.es", "%@calendar42.com"]
     EMAIL_BLACKLIST = [
         "feynman@7bridg.es", "rosalind@7bridg.es", "euler@7bridg.es",
         "planck@7bridg.es", "tesla@7bridg.es", "dantzig@7bridg.es",
@@ -170,7 +170,7 @@ class DevelopmentConfig(DefaultConfig):
     EMAIL_BLACKLIST = [
         "feynman@7bridg.es", "rosalind@7bridg.es", "euler@7bridg.es",
         "planck@7bridg.es", "tesla@7bridg.es", "dantzig@7bridg.es",
-        "curie@7bridg.es", "sudo@staffjoy.com"
+        "curie@7bridg.es", "sudo@calendar42.com"
     ]
 
     REMEMBER_COOKIE_SECURE = False
@@ -180,7 +180,45 @@ class DevelopmentConfig(DefaultConfig):
     ASSETS_DEBUG = True
 
     # For dev env cron
-    DEV_CRON_EMAIL = "sudo@staffjoy.com"
+    DEV_CRON_EMAIL = "sudo@calendar42.com"
+    DEV_CRON_API_KEY = "staffjoydev"
+
+    # Twilio!
+    TWILIO_ACCOUNT_SID = os.environ.get("TWILIO_ACCOUNT_SID")
+    TWILIO_AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN")
+    TWILIO_NUMBER = {
+        # Country code to number
+    }
+
+    KPI_EMAILS_TO_EXCLUDE = []
+
+class DemoConfig(DefaultConfig):
+    ENV = "demo"
+    DEBUG = True
+    URL = "http://192.168.100.203/"
+    ROBOTS_TEMPLATE = "text/robots-private.txt"
+    SQLALCHEMY_DATABASE_URI = "mysql://root:bacon@localhost/dev"
+    SECRET_KEY = "It is a secret - and if I told you it would not be a secret"
+    SERVER_NAME = "shift.c42.io"
+    # Time for state monitoring
+    CHOMP_PROCESSING_TIMEOUT = 10 * 60  # 10 min in seconds
+    MOBIUS_PROCESSING_TIMEOUT = 10 * 60  # 10 min in seconds
+    QUEUE_TIMEOUT = 10 * 60  # 10 min in seconds
+
+    EMAIL_BLACKLIST = [
+        "feynman@7bridg.es", "rosalind@7bridg.es", "euler@7bridg.es",
+        "planck@7bridg.es", "tesla@7bridg.es", "dantzig@7bridg.es",
+        "curie@7bridg.es", "sudo@calendar42.com"
+    ]
+
+    REMEMBER_COOKIE_SECURE = False
+
+    PAID_ENV = "test"
+
+    ASSETS_DEBUG = True
+
+    # For dev env cron
+    DEV_CRON_EMAIL = "sudo@calendar42.com"
     DEV_CRON_API_KEY = "staffjoydev"
 
     # Twilio!
@@ -204,6 +242,7 @@ class TestConfig(DevelopmentConfig):
 
 config = {  # Determined in main.py
     "dev": DevelopmentConfig,
+    "demo": DemoConfig,
     "stage": StageConfig,  # Stage thinks it's prod, except robots.txt and url
     "prod": DefaultConfig,
     "test": TestConfig,
