@@ -65,7 +65,7 @@ class OrgAdminsApi(Resource):
         alert_email(
             user, "You have been added as an adminstator of %s on Staffjoy" %
             organization.name,
-            "You have been added as an organization administrator of the Staffjoy account for %s."
+            "You have been added as an organization administrator of the c42 account for %s."
             % organization.name)
 
         return marshal(user, user_fields), 201

@@ -62,7 +62,7 @@ class KpisApi(Resource):
                     .where(Shift2.start < (week_start + timedelta(days=7)))\
                     .select_from(Shift2).select_from(User)
 
-                # Filter out staffjoy domains
+                # Filter out c42 domains
                 query = self._filter_not_staffjoy(query)
 
                 people = db.session.execute(query).fetchone()[0]
@@ -105,7 +105,7 @@ class KpisApi(Resource):
         return db.session.execute(query).fetchone()[0]
 
     def _people_online_in_last_day(self):
-        """Return number of users, not staffjoy, with activity in last day"""
+        """Return number of users, not c42 with activity in last day"""
         now = datetime.utcnow()
         query = select([func.count(distinct(User.id))])\
             .where(User.last_seen > (now - timedelta(days=1)))\
@@ -117,7 +117,7 @@ class KpisApi(Resource):
 
     @staticmethod
     def _filter_not_staffjoy(query):
-        """Remove known Staffjoy emails"""
+        """Remove known c42 emails"""
         for email in current_app.config.get("KPI_EMAILS_TO_EXCLUDE"):
             query = query.where(not_(User.email.like(email)))
         return query

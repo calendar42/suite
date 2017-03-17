@@ -20,7 +20,7 @@ from app.apiv2.internal.cron.cron_timeclock_notification_sms import run_cron_tim
 
 
 class ShiftMechanic(Resource):
-    """ Cron job runner on Staffjoy states """
+    """ Cron job runner on c42 states """
 
     @permission_sudo
     def get(self):
@@ -250,7 +250,7 @@ class ShiftMechanic(Resource):
 
             if user.phone_number:
                 user.send_sms(
-                    "You have been automatically clocked out by Staffjoy after being clocked in for %s hours"
+                    "You have been automatically clocked out by c42 after being clocked in for %s hours"
                     % constants.MAX_TIMECLOCK_HOURS)
             role = Role.query.get(timeclock.role_id)
             location = Location.query.get(role.location_id)
@@ -258,7 +258,7 @@ class ShiftMechanic(Resource):
 
             location.send_manager_email(
                 "[Action Required] %s forgot to clock out" % user.name,
-                "%s (%s) forgot to clock out of their last shift, so Staffjoy just automatically clocked them out after %s hours. Please review and adjust their timeclock on the %s attendance page."
+                "%s (%s) forgot to clock out of their last shift, so c42 just automatically clocked them out after %s hours. Please review and adjust their timeclock on the %s attendance page."
                 % (user.name, user.email, constants.MAX_TIMECLOCK_HOURS,
                    location.name),
                 url_for("manager.manager_app", org_id=org.id, _external=True) +
