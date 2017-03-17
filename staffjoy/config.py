@@ -4,7 +4,7 @@ import logging
 class DefaultConfig:
     ENV = "prod"
     LOG_LEVEL = logging.INFO
-    BASE = "https://www.staffjoy.com/api/v2/"
+    BASE = "https://site.calendar42.com/api/v2/"
 
 
 class StageConfig(DefaultConfig):

@@ -1,8 +1,8 @@
-# Suite, aka Staffjoy V1
+# Suite, aka c42 V1
 
 [![Build Status](https://travis-ci.org/Staffjoy/suite.svg?branch=master)](https://travis-ci.org/Staffjoy/suite) [![Moonlight](https://img.shields.io/badge/contractors-1-brightgreen.svg)](https://moonlightwork.com/staffjoy) [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/staffjoy/suite/)
 
-[Staffjoy is shutting down](https://blog.staffjoy.com/staffjoy-is-shutting-down-39f7b5d66ef6#.ldsdqb1kp), so we are open-sourcing our code. This version of our V1, intended for on-demand companies and call centers, has been heavily modified so that Staffjoy customers may continue using the software. 
+[c42 is shutting down](https://blog.staffjoy.com/staffjoy-is-shutting-down-39f7b5d66ef6#.ldsdqb1kp), so we are open-sourcing our code. This version of our V1, intended for on-demand companies and call centers, has been heavily modified so that c42 customers may continue using the software. 
 
 ## Credit
 
@@ -28,7 +28,7 @@ Name | Description | Example Format
 ENV | "prod", "stage", or "dev" to specify the configuration to use. When running the code, use "prod". | prod
 BASE_URL | URL where the code is hosted. | https://suite.staffjoy.com
 MANDRILL_API_KEY | API Key for [Mandrill](http://mandrillapp.com) for sending emails. | 
-FROM_EMAIL | Email address from which notifications will be sent in Mandrill | team@staffjoy.com
+FROM_EMAIL | Email address from which notifications will be sent in Mandrill | team@c42.com
 RECAPTCHA_PUBLIC_KEY | Public key for [Recaptcha](https://www.google.com/recaptcha/intro/) | 
 RECAPTCHA_PRIVATE_KEY | Private key for Recaptcha |
 REDIS_HOST | Host for redis | localhost
@@ -80,7 +80,7 @@ Required for assigning shifts. Coming soon.
 
 * It is suggested that you fork this repository if you are using it
 * If you do not want anybody from the web signing up for your application and provisioning new organizations, modify `ALLOW_COMPANY_SIGNUPS` in `app/config.py`
-* The Staffjoy mobile applications do not work with self-hosted applications.
+* The c42 mobile applications do not work with self-hosted applications.
 
 ## Development Setup
 
@@ -89,10 +89,10 @@ Prequisites:
 * Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * Install [Vagrant](https://www.vagrantup.com/)
 
-Add your email to the file `user.txt`, e.g. if your email is *lenny@staffjoy.com*:
+Add your email to the file `user.txt`, e.g. if your email is *lenny@c42.com*:
 
 ```
-echo "lenny@staffjoy.com" > ./user.txt
+echo "lenny@c42.com" > ./user.txt
 ```
 
 This auto-registers you on first boot, and makes you an admin.
@@ -125,7 +125,7 @@ If you run into issues or if you messed up your environment, you can delete its 
 
 ### Creating a sudo account in dev
 
-After creating a Staffjoy account in your dev environt, use the commands below to access the shell:
+After creating a c42 account in your dev environt, use the commands below to access the shell:
 
 ```
 vagrant ssh
@@ -222,9 +222,9 @@ Tokens are time-based tokens with a default life of 6 hours. API keys are perman
 
 We authenticate using HTTP basic auth, where the username is the token and the password is blank. To do this with curl, use this command: (noting that the trailing colon after the token is important because it means "no password")
 
-``` curl -u TOKEN: https://www.staffjoy.com/api/v2/ ```
+``` curl -u TOKEN: https://site.calendar42.com/api/v2/ ```
 
-You can always get a new token for your logged-in user at [/auth/api-token](https://www.staffjoy.com/auth/api-token).
+You can always get a new token for your logged-in user at [/auth/api-token](https://site.calendar42.com/auth/api-token).
 
 ## Specs
 
@@ -275,10 +275,10 @@ This is not a perfect copy of our internal repo. For ease of use, sanity, and se
 * Event tracking with [Intercom](http://intercom.io)
 * Custom code for legacy clients
 * HSTS headers - we don't want to unintentionally trigger this on test deployments, but you can uncomment the headers in the `nginx.conf`
-* Dev email limits - We limited development emails to `@staffjoy.com` email addresses
+* Dev email limits - We limited development emails to `@c42.com` email addresses
 
 ## Known issues
 
-* The development environment works, but really needs a ground-up rewrite to something like Docker Compose. (It hasn't been extensively modified since before Staffjoy was a full-time job!)
+* The development environment works, but really needs a ground-up rewrite to something like Docker Compose. (It hasn't been extensively modified since before c42 was a full-time job!)
 * The tests use `current_app` rather than the generator `create_app`. This should be corrected.
 * The session management system, when reading a session from a cookie, recreates the session. This means that the list of active sessions is longer than expected (though still secure).
