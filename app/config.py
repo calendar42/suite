@@ -36,10 +36,10 @@ class DefaultConfig:
     STATUS_PAGE_API_KEY = os.environ.get("STATUS_PAGE_API_KEY")
 
     # Intercom Tracking
-    INTERCOM_ID = os.environ.get("INTERCOM_ID")
+    INTERCOM_ID = os.environ.get("INTERCOM_ID", "")
     # For user hashes
-    INTERCOM_SECRET = os.environ.get("INTERCOM_SECRET")
-    INTERCOM_API_KEY = os.environ.get("INTERCOM_API_KEY")
+    INTERCOM_SECRET = os.environ.get("INTERCOM_SECRET", "")
+    INTERCOM_API_KEY = os.environ.get("INTERCOM_API_KEY", "")
 
     # Logging
     LOG_LEVEL = logging.INFO
