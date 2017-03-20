@@ -26,7 +26,7 @@ Name | Description | Example Format
 ENV | "prod", "stage", or "dev" to specify the configuration to use. When running the code, use "prod". | prod
 BASE_URL | URL where the code is hosted. | https://suite.staffjoy.com
 MANDRILL_API_KEY | API Key for [Mandrill](http://mandrillapp.com) for sending emails. | 
-FROM_EMAIL | Email address from which notifications will be sent in Mandrill | team@C42.com
+FROM_EMAIL | Email address from which notifications will be sent in Mandrill | team@calendar42.com
 RECAPTCHA_PUBLIC_KEY | Public key for [Recaptcha](https://www.google.com/recaptcha/intro/) | 
 RECAPTCHA_PRIVATE_KEY | Private key for Recaptcha |
 REDIS_HOST | Host for redis | localhost
@@ -87,10 +87,10 @@ Prequisites:
 * Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * Install [Vagrant](https://www.vagrantup.com/)
 
-Add your email to the file `user.txt`, e.g. if your email is *lenny@C42.com*:
+Add your email to the file `user.txt`, e.g. if your email is *user@calendar42.com*:
 
 ```
-echo "lenny@C42.com" > ./user.txt
+echo "user@calendar42.com" > ./user.txt
 ```
 
 This auto-registers you on first boot, and makes you an admin.
@@ -273,7 +273,7 @@ This is not a perfect copy of our internal repo. For ease of use, sanity, and se
 * Event tracking with [Intercom](http://intercom.io)
 * Custom code for legacy clients
 * HSTS headers - we don't want to unintentionally trigger this on test deployments, but you can uncomment the headers in the `nginx.conf`
-* Dev email limits - We limited development emails to `@C42.com` email addresses
+* Dev email limits - We limited development emails to `@calendar42.com` email addresses
 
 ## Known issues
 
