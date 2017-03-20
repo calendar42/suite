@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2015-2017 C42 Inc.
+Copyright (c) 2015-2017 Calendar42 B.V.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -40,7 +40,7 @@ the terms above.
 * Transition.js (github.com/smnh/TransitionJs) is licensed under an MIT License
 * bootstrap-datepicker (github.com/uxsolutions/bootstrap-datepicker) is licensed under an Apache License 2.0
 * handsontable (github.com/handsontable/handsontable) is licensed under an MIT License
-* ICanHaz.js (github.com/HenrikJoreteg/ICanHaz.js) is licensed under an MIT License 
+* ICanHaz.js (github.com/HenrikJoreteg/ICanHaz.js) is licensed under an MIT License
 * jstz (github.com/iansinnott/jstz) is licensed under an MIT License
 * moment-range (github.com/gf3/moment-range) is in the public domain under an Unlicense
 * moment-timzeone (github.com/moment/moment-timezone) is licensed under an MIT License
