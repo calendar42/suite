@@ -157,11 +157,11 @@ class StageConfig(DefaultConfig):
 class DevelopmentConfig(DefaultConfig):
     ENV = "dev"
     DEBUG = True
-    URL = "http://shift.c42.io"
+    URL = "http://shift.C42.io"
     ROBOTS_TEMPLATE = "text/robots-private.txt"
     SQLALCHEMY_DATABASE_URI = "mysql://root:bacon@localhost/dev"
     SECRET_KEY = "It is a secret - and if I told you it would not be a secret"
-    SERVER_NAME = "shift.c42.io"
+    SERVER_NAME = "shift.C42.io"
     # Time for state monitoring
     CHOMP_PROCESSING_TIMEOUT = 10 * 60  # 10 min in seconds
     MOBIUS_PROCESSING_TIMEOUT = 10 * 60  # 10 min in seconds

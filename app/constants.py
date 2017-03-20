@@ -29,7 +29,7 @@ PLAN_PUBLIC_KEYS = [
 DEFAULT_DELIMITER = "|"
 
 NULL_TIME_OFF_REQUEST = "null"
-SUDO_EXTERNAL_NAME = "c42 Support"
+SUDO_EXTERNAL_NAME = "C42 Support"
 SUDO_EXTERNAL_EMAIL = "help@staffjoy.com"
 
 PHONE_COUNTRY_CODE_TO_COUNTRY = {"1": "USA and Canada", "44": "United Kingdom"}

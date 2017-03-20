@@ -17,7 +17,7 @@ def index():
     if current_user.is_authenticated:
         # If authenticated - push into app, not homepage
         if current_user.is_sudo():
-            # c42 user. Go to Euler.
+            # C42 user. Go to Euler.
             return redirect(url_for("euler.index"))
 
         admins = current_user.admin_of.all()
@@ -154,7 +154,7 @@ def mobile_config():
 def apiv1_deprecate(path):
     return jsonify({
         "message":
-        "Version 1 of the c42 API has been deprecated." +
+        "Version 1 of the C42 API has been deprecated." +
         " Details at help.staffjoy.com"
     }), 410
 

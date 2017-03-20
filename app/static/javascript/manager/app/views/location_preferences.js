@@ -46,7 +46,7 @@
                     new Views.DangerZoneCard({
                         description: 'Clicking here will delete ' + data.name + ' including all of its roles and users.',
                         buttonLabel: 'Delete ' + data.name,
-                        confirmationMessage: 'Are you sure you want to delete ' + data.name + '? c42 retains some data for compliance purposes, such as preserving payroll records.',
+                        confirmationMessage: 'Are you sure you want to delete ' + data.name + '? C42 retains some data for compliance purposes, such as preserving payroll records.',
                         dangerZoneCallback: self.deleteLocation.bind(self),
                     })
                 );

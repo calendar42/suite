@@ -544,7 +544,7 @@ class User(UserMixin, db.Model):
     @staticmethod
     def send_activation_email(user, inviter_name=None):
         if inviter_name is None or len(inviter_name) == 0:
-            subject = "[Action Required] Activate your c42 Account"
+            subject = "[Action Required] Activate your C42 Account"
         else:
             subject = "[Action Required] Set up your %s shift scheduling account" % (
                 inviter_name)
@@ -864,7 +864,7 @@ class User(UserMixin, db.Model):
         })
 
         # Send verification pin
-        message = "Hi %s! Your c42 verification pin is %s" % (
+        message = "Hi %s! Your C42 verification pin is %s" % (
             self.first_name, verification_pin)
         send_sms(phone_country_code, phone_national_number, message)
 

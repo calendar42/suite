@@ -120,7 +120,7 @@ class Organization(db.Model):
             .select_from(Organization)\
             .select_from(user_model.User)
 
-        # Filter out demo account and c42 emails
+        # Filter out demo account and C42 emails
         for email in current_app.config.get("KPI_EMAILS_TO_EXCLUDE"):
             query = query.where(not_(user_model.User.email.like(email)))
 
@@ -169,11 +169,11 @@ class Organization(db.Model):
         return DAYS_OF_WEEK[wrap_index:] + DAYS_OF_WEEK[:wrap_index]
 
     def is_plan_boss(self):
-        """determines if the current plan is part of c42 Boss"""
+        """determines if the current plan is part of C42 Boss"""
         return self.plan in boss_plans
 
     def is_plan_flex(self):
-        """determines if the current plan is part of c42 Flex"""
+        """determines if the current plan is part of C42 Flex"""
         return self.plan in flex_plans
 
     def get_week_start_from_datetime(self, current_day):

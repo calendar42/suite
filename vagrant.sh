@@ -39,7 +39,7 @@ echo "source /vagrant/vagrant-venv/bin/activate" >> $HOME/.bashrc
 echo "source /vagrant/vagrant-venv/bin/activate" >> /home/vagrant/.bashrc
 
 # Install cron job
-echo '* * * * * root curl --user staffjoydev: http://shift.c42.io/api/v2/internal/cron/' >> /etc/crontab
+echo '* * * * * root curl --user staffjoydev: http://shift.C42.io/api/v2/internal/cron/' >> /etc/crontab
 
 cd /vagrant/ && rm -rf vagrant-venv && virtualenv vagrant-venv
 source /vagrant/vagrant-venv/bin/activate && export PATH="$PATH:$HOME/npm/bin:/home/vagrant/node_modules/.bin:$PATH" && export ENV="dev" && cd /vagrant/ && make build && make dev-requirements && make db-deploy
