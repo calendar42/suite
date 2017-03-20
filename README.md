@@ -1,6 +1,6 @@
 # Suite, aka C42 V1
 
-... WIP ...
+This is a WIP version modified by [C42](http://site.calendar42.com/).
 
 ## Credit
 
