@@ -17,7 +17,7 @@ def twiml(resp):
 
 
 def staffjoy_phone_number(country_code=None, fmt=None):
-    """Return c42 phonenumber in for outputs"""
+    """Return C42 phonenumber in for outputs"""
     DEFAULT_CC = "1"  # USA
 
     if fmt is None or fmt is "pretty":

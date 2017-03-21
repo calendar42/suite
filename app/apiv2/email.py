@@ -53,7 +53,7 @@ def alert_changed_shift(org_id, location_id, role_id, local_datetime, user_id):
 
     alert_email(
         user, "Changes to your %s shifts" % org.name,
-        "Your manager has updated your upcoming shifts on %s. Please log into your c42 account to view the latest schedule: \n <a href=\"%s\">%s</a>"
+        "Your manager has updated your upcoming shifts on %s. Please log into your C42 account to view the latest schedule: \n <a href=\"%s\">%s</a>"
         % (local_datetime.strftime("%Y-%m-%d"), planner_url, planner_url))
 
     # Note that email was sent
@@ -97,7 +97,7 @@ def alert_available_shifts(org_id,
 
         alert_email(
             user, "New %s Shifts Available" % org.name,
-            "New shifts are available on %s. To claim them, log into your c42 account and visit My Schedules: \n <a href=\"%s\">%s</a>"
+            "New shifts are available on %s. To claim them, log into your C42 account and visit My Schedules: \n <a href=\"%s\">%s</a>"
             % (local_datetime.strftime("%Y-%m-%d"), planner_url, planner_url))
 
         # Note that email was sent

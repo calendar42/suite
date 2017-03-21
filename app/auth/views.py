@@ -50,7 +50,7 @@ def unconfirmed():
 @auth.route("/sign-up", methods=["GET", "POST"])
 @limiter.limit("30/minute")
 def sign_up():
-    """sign up for the c42 application"""
+    """sign up for the C42 application"""
     if is_native():
         return redirect(url_for("auth.native_login"))
 
@@ -132,7 +132,7 @@ def resend_confirmation():
 @auth.route("/login", methods=["GET", "POST"])
 @limiter.limit("30/minute")
 def login():
-    """login page for the c42 application"""
+    """login page for the C42 application"""
     if is_native():
         return redirect(url_for("auth.native_login", **request.args))
 
@@ -167,7 +167,7 @@ def login():
 @auth.route("/native", methods=["GET", "POST"])
 @limiter.limit("30/minute")
 def native_login():
-    """login page for the c42 application on native"""
+    """login page for the C42 application on native"""
     REMEMBER_ME = True  # Always remember native users
     if current_user.is_authenticated:
         return redirect(url_for("main.index"))
@@ -503,7 +503,7 @@ def sessions():
 @auth.route("/free-trial", methods=["GET", "POST"])
 @limiter.limit("20/minute")
 def free_trial():
-    """sign up for the c42 application and a free trial"""
+    """sign up for the C42 application and a free trial"""
     if current_user.is_authenticated:
         return redirect(url_for("auth.portal"))
 
@@ -528,7 +528,7 @@ def free_trial():
 @auth.route("/notifications", methods=["GET", "POST"])
 @login_required
 def notifications():
-    """Modify the notifications that c42 sends"""
+    """Modify the notifications that C42 sends"""
 
     form = ChangeNotificationsForm()
     if form.validate_on_submit():
@@ -602,7 +602,7 @@ def phone_number_add():
     return render_template(
         "auth.html",
         form_title="Add Your Phone Number",
-        help_text="Add your phone number to c42 for SMS reminders and improved account security. If your country is unavailable, please contact support.",
+        help_text="Add your phone number to C42 for SMS reminders and improved account security. If your country is unavailable, please contact support.",
         form=form)
 
 

@@ -15,7 +15,7 @@ class StageConfig(DefaultConfig):
 class DevelopmentConfig(DefaultConfig):
     ENV = "dev"
     LOG_LEVEL = logging.DEBUG
-    BASE = "http://shift.c42.io/api/v2/"
+    BASE = "http://shift.C42.io/api/v2/"
 
 class TestConfig(DefaultConfig):
     ENV = "test"

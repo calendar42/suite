@@ -60,11 +60,11 @@ def sms():
 
     if from_user:
         current_app.logger.info(
-            "Incoming SMS from %s to c42 number %s by user %s" %
+            "Incoming SMS from %s to C42 number %s by user %s" %
             (from_number, to_number, from_user))
     else:
         current_app.logger.info(
-            "Incoming SMS from %s to c42 number %s (unknown user) " %
+            "Incoming SMS from %s to C42 number %s (unknown user) " %
             (from_number, to_number))
 
     # Get a response
@@ -95,11 +95,11 @@ def welcome():
 
     if from_user:
         current_app.logger.info(
-            "Incoming call from %s to c42 number %s by user %s" %
+            "Incoming call from %s to C42 number %s by user %s" %
             (from_number, to_number, from_user))
     else:
         current_app.logger.info(
-            "Incoming call from %s to c42 number %s (unknown user) " %
+            "Incoming call from %s to C42 number %s (unknown user) " %
             (from_number, to_number))
 
     response = twilio.twiml.Response()
@@ -156,8 +156,8 @@ def _sales(response):
     SALES_NUMBER = "+1<phonenumber>"
 
     response.say(
-        "Now connecting you to c42 sales. " +
-        "You may also send an email to sales at c42 dot com.",
+        "Now connecting you to C42 sales. " +
+        "You may also send an email to sales at C42 dot com.",
         voice="alice",
         language="en-gb")
     response.dial(SALES_NUMBER)
@@ -166,9 +166,9 @@ def _sales(response):
 
 def _support(response):
     response.say(
-        "c42 support operates over email. Please send your question to " +
-        "help at c42 dot com for prompt help. To see the system " +
-        "status, visit status dot c42 dot com. You may also find answers to common "
+        "C42 support operates over email. Please send your question to " +
+        "help at C42 dot com for prompt help. To see the system " +
+        "status, visit status dot C42 dot com. You may also find answers to common "
         +
         "questions at help dot staffjoy.com. Thank you for calling Staffjoy. "
         + "Bye!",
@@ -184,16 +184,16 @@ def _billing(response):
 
     if _business_open():
         response.say(
-            "Now connecting you to c42 billing.  " +
-            "You may also send an email to billing at c42 dot com.",
+            "Now connecting you to C42 billing.  " +
+            "You may also send an email to billing at C42 dot com.",
             voice="alice",
             language="en-gb")
         response.dial(BILLING_NUMBER)
     else:
         response.say(
-            "The c42 billing office is currently closed. Please email " +
-            "billing at c42 dot com for prompt service. " +
-            "Thanks for calling c42 - Bye!",
+            "The C42 billing office is currently closed. Please email " +
+            "billing at C42 dot com for prompt service. " +
+            "Thanks for calling C42 - Bye!",
             voice="alice",
             language="en-gb")
 
@@ -206,15 +206,15 @@ def _corporate(response):
     CORPORATE_NUMBER = "+1<phonenumber>"  # Phone number
     if _business_open():
         response.say(
-            "Now connecting you to c42 corporate.",
+            "Now connecting you to C42 corporate.",
             voice="alice",
             language="en-gb")
         response.dial(CORPORATE_NUMBER)
     else:
         response.say(
-            "c42 headquarters is currently closed. Please " +
-            "email help at c42 dot com for prompt service. " +
-            "Thanks for calling c42 - Bye!",
+            "C42 headquarters is currently closed. Please " +
+            "email help at C42 dot com for prompt service. " +
+            "Thanks for calling C42 - Bye!",
             voice="alice",
             language="en-gb")
 

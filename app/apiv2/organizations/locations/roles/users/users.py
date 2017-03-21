@@ -157,7 +157,7 @@ class RoleMembersApi(Resource):
 
         alert_email(
             user, "You have been added to %s on Staffjoy" % organization.name,
-            "%s is using c42 to manage its workforce, and you have been added to the team <b>%s</b> at the <b>%s</b> location."
+            "%s is using C42 to manage its workforce, and you have been added to the team <b>%s</b> at the <b>%s</b> location."
             % (organization.name, role.name, location.name, ))
 
         data = {}

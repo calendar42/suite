@@ -6,14 +6,14 @@ study_config = {
     "on-demand-startup": {
         # Actual title of case study
         "name":
-        "c42 Decreases Labor Costs 10% at On-Demand Startup",
+        "C42 Decreases Labor Costs 10% at On-Demand Startup",
         # Short, less editorial name for use on the case studies list page
         "short_name":
         "On-Demand Startup",
         "hero_image":
         "/static/images/case-studies/on-demand-startup.jpg",
         "summary":
-        "c42 scheduling technology decreased labor costs 10% at a major on-demand startup. This case study looks at how and why optimal scheduling saved so much money.",
+        "C42 scheduling technology decreased labor costs 10% at a major on-demand startup. This case study looks at how and why optimal scheduling saved so much money.",
         "source":
         "on-demand-startup.md",
         "publication":
