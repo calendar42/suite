@@ -127,8 +127,8 @@
         },
         chooseColor: function(index) {
             var colors = [
-                "#48B7AB",  // primary brand
-                "#A9CE42",  // a slightly darker logo green
+                "#44bbff",  // primary brand
+                "#9CDAFE",  // a slightly darker logo green
                 "#255872",  // a blue
                 "#493E45",  // brown
             ];
